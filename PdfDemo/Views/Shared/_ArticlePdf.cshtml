@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+}
+@using RazorEngine.Text
+@model PdfDemo.Models.Article
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Article PDF</title>
+</head>
+<body>
+    <div>
+        Article ID: @Model.Id
+    </div>
+    <p style="font-weight: bold">
+        Article title: @Model.Title
+    </p>
+    <p>
+        @(new RawString(Model.Details))
+    </p>
+</body>
+</html>
